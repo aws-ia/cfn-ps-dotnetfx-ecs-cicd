@@ -96,7 +96,7 @@ Parameters:
   GitHubRepositoryName:
     Type: String
     Description: GitHub repository name
-    Default: quickstart-dotnetfx-ecs-cicd
+    Default: cfn-ps-dotnetfx-ecs-cicd
   GitHubBranchName:
     Type: String
     Description: GitHub branch name
