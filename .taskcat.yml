@@ -1,5 +1,5 @@
 project:
-  name: quickstart-dotnetfx-ecs-cicd
+  name: cfn-ps-dotnetfx-ecs-cicd
   regions:
   - us-east-1
   - us-east-2
