@@ -1,33 +1,30 @@
 project:
-  name: cfn-sample-template
-  owner: quickstart@amazon.com
-  package_lambda: false
+  name: quickstart-dotnetfx-ecs-cicd
   regions:
-  - ap-northeast-1
-  - ap-northeast-2
-  - ap-southeast-1
-  - ap-southeast-2
-  - eu-central-1
-  - eu-west-1
-  - sa-east-1
   - us-east-1
+  - us-east-2
   - us-west-1
   - us-west-2
+  - eu-west-1
+  - eu-west-2
+  - eu-west-3
+  - eu-central-1
+  - ap-southeast-1
+  - ap-southeast-2
+  - ap-northeast-1
+  - ap-northeast-2
+  - ap-south-1
+  package_lambda: false
 tests:
-  sample:
+  default:
+    template: ./templates/quickstart-dotnetfx-ecs-cicd-new-cluster.template.yaml
     parameters:
-      Param1: 'Inputs to Stack'
-      # Examples: of other taskcat dynamic input parameters for more into see http://taskcat.io
-      #
-      #      AvailabilityZones: $[taskcat_genaz_3]
-      #      ByteValue: 1
-      #      PasswordA: $[taskcat_genpass_8A]
-      #      PasswordB: $[taskcat_genpass_32S]
-      #      RandomNumber: $[taskcat_random-numbers]
-      #      RandomString: $[taskcat_random-string]
-      #      StackName: TestStack
-      #      UUID: $[taskcat_genuuid]
-      #
-    regions:
-    - us-east-2
-    template: templates/another-workload.template.yaml
+      EcsClusterName: "taskcat"
+      EcsServiceName: "taskcat-service"
+      TaskContainerName: "sampleapp"
+      GitHubRepositoryName: "quickstart-dotnetfx-ecs-cicd"
+      GitHubBranchName: "develop"
+      GitHubOwner: override
+      GitHubOAuthToken: override
+      QSS3BucketName: $[taskcat_autobucket]
+      QSS3BucketRegion: $[taskcat_current_region]
