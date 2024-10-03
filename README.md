@@ -1,5 +1,9 @@
+## Deprecation Notice
 
-# .NET Framework CI/CD for Amazon ECS
+:x: This repository is subject to deprecation in Q4 2024. For more details, [please review this announcement](https://github.com/aws-ia/.announcements/issues/1). 
+
+
+## .NET Framework CI/CD for Amazon ECS
 
 For architectural details, step-by-step instructions, and customization options, see the [deployment guide](https://fwd.aws/wxV55?).
 
